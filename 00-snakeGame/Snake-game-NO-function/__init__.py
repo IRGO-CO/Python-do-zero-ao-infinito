@@ -18,8 +18,8 @@ altura = int(480)
 largura = int(640)
 
 # Gera a comida aleatoriamente
-comiday = randint(35, 445)
 comidax = randint(15, 625)
+comiday = randint(35, 445)
 bonusx, bonusy = randint(15, 625), randint(35, 445)
 
 # Define a posição velocidade e direção da cabeça da cobra
@@ -162,8 +162,8 @@ while True:
     # Faz a cobra comer a comida
     if cobra.colliderect(comida):
         colisao.play()
-        comiday = randint(35, 445)
         comidax = randint(15, 625)
+        comiday = randint(35, 445)
         pontos += 1
         totPontos = pontos
         veloObj += 0.001
@@ -184,10 +184,6 @@ while True:
         if corpo.colliderect(cobra) and c > 5:
             pontos = veloObj = 0
 
-        # Verifica se a comida e o bonus vai nascer 'em baixo' da cobra
-        if corpo.colliderect(comida):
-            comidax = randint(35, 445)
-            comiday = randint(15, 625)
 
     # Atualiza a tela no final de cada loop
     pygame.display.update()
