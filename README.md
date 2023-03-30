@@ -1,6 +1,6 @@
 # Python-do-zero-ao-infinito
- Linguagem python para quem nem sabe o que é isso. BR
-
+### Linguagem python para quem nem sabe o que é isso. BR
+---
 Olá! Me chamo Igor Correa, tenho 27 anos e sou portador de autismo leve e TDAH. Desde os meus 13 anos desenvolvo um hiperfoco em programação e passei muitas horas aprimorando minhas habilidades em diversas linguagens.
 
 Apesar da minha paixão pela programação, nunca trabalhei como programador devido às minhas dificuldades interpessoais. Porém, isso nunca me impediu de continuar estudando e aprimorando minhas habilidades técnicas e criativas.
