@@ -49,13 +49,14 @@ def morte():
 
 
 def comer():
-    global comidax, comiday, pontos, comprimento, cobrax, cobray, lista_cabeca, lista_cobra, corrandom
+    global comidax, comiday, pontos, comprimento, corrandom, velocidade
     colisao.play()
     corrandom = [randint(0, 255), randint(0, 255), randint(0, 255)]
     comidax = randint(15, 625)
     comiday = randint(35, 445)
     pontos += 1
     comprimento += 2
+    velocidade += 0.01
 
 
 def menu():
@@ -202,7 +203,7 @@ cobrax = largura // 2
 cobray = altura // 2
 comidax = randint(15, 625)
 comiday = randint(35, 445)
-velocidade = 3
+velocidade: int = 3
 controlex = velocidade
 controley = 0
 comprimento = int(5)
