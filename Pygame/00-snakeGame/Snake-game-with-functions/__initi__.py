@@ -177,7 +177,6 @@ altura = int(480)
 
 # Fonte dos textos
 fontep = pygame.font.SysFont('comic sans', 20, True, False)
-
 fonte0 = pygame.font.SysFont('arial', 100, True, True)
 fonte1 = pygame.font.SysFont('arial', 15, True, True)
 txt = ['Game Over!', 'Pressione ENTER para jogar novamente ou ESC para sair']
@@ -190,7 +189,7 @@ rettxt1.center = (largura // 2, altura // 2)
 
 # Cria a tela
 tela = pygame.display.set_mode((largura, altura))
-pygame.display.set_caption('Primeiro Jogo!')
+pygame.display.set_caption('Snake Game')
 
 # Define o 'frame rate'
 relogio = pygame.time.Clock()
