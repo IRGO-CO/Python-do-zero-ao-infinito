@@ -134,6 +134,8 @@ def jogo():
                     else:
                         controlex = velocidade
                         controley = 0
+                if event.key == K_ESCAPE:
+                    menu()
         cobrax += controlex
         cobray += controley
         # Aumenta a velocidade da cobra
@@ -196,7 +198,7 @@ relogio = pygame.time.Clock()
 
 # Contadores
 corrandom = [255, 255, 255]
-volume = 0.4
+volume = 0.0
 pontos = 0
 cobrax = largura // 2
 cobray = altura // 2
