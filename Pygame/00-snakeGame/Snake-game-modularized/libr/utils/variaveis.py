@@ -4,7 +4,7 @@ from random import randint
 
 comidax = randint(3, 637)
 comiday = randint(3, 477)
-velocidade = 2
+velocidade = 0.5
 
 cobrax = 640 // 2
 cobray = 480 // 2

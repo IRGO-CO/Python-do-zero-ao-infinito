@@ -1,17 +1,21 @@
-from random import randint
+from . import variaveis
+
+from libr.menu import *
 
 import pygame
+
 import pygame.key
+
+from random import randint
 
 from pygame.locals import *
 
-from sys import exit
+from libr.utils.sons import *
 
-from lib import variaveis
+from sys import exit
 
 
 def comer():
-    comeu = pygame.mixer.Sound('../ES_Suction Pop 6 - SFX Producer.wav')
     comeu.play()
     variaveis.comidax = randint(3, 637)
     variaveis.comiday = randint(3, 477)
@@ -50,6 +54,8 @@ def controle():
                 else:
                     variaveis.direcaox = 1
                     variaveis.direcaoy = 0
+            if event.key == K_ESCAPE:
+                menu_pause()
 
         espaco = pygame.key.get_pressed()
         if espaco[pygame.K_SPACE]:
@@ -60,14 +66,21 @@ def controle():
 
 def corpo():
     variaveis.listaCorpo.insert(0, [variaveis.cobrax, variaveis.cobray])
-    if len(variaveis.listaCorpo) > variaveis.tamanho:
+    if len(variaveis.listaCorpo) > variaveis.tamanho - 4:
         del variaveis.listaCorpo[variaveis.tamanho:]
     for i in variaveis.listaCorpo:
-        pygame.draw.rect(variaveis.tela, (255, 0, 0), (i[0], i[1], 10, 10))
+        pygame.draw.circle(variaveis.tela, (200, 0, 0), (i[0], i[1]), 5)
     if variaveis.listaCorpo.count([variaveis.cobrax, variaveis.cobray]) > 1:
         morte()
 
 
+def resetar():
+    variaveis.cobrax = 640 // 2
+    variaveis.cobray = 480 // 2
+    variaveis.tamanho = 5
+
+
+
 def morte():
-    pygame.quit()
-    exit()
+    resetar()
+    menu_pause()
