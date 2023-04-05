@@ -2,8 +2,8 @@ import pygame
 
 from random import randint
 
-comidax = randint(3, 637)
-comiday = randint(3, 477)
+comidax = randint(13, 627)
+comiday = randint(13, 467)
 velocidade = 0.5
 
 cobrax = 640 // 2

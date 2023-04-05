@@ -17,8 +17,8 @@ from sys import exit
 
 def comer():
     comeu.play()
-    variaveis.comidax = randint(3, 637)
-    variaveis.comiday = randint(3, 477)
+    variaveis.comidax = randint(18, 625)
+    variaveis.comiday = randint(38, 444)
     variaveis.velocidade += 0.001
     variaveis.tamanho += 2
     variaveis.pontos += 1
@@ -30,25 +30,25 @@ def controle():
             pygame.quit()
             exit()
         if event.type == KEYDOWN:
-            if event.key == K_w:
+            if event.key == K_w or event.key == K_UP:
                 if variaveis.direcaoy == 1:
                     pass
                 else:
                     variaveis.direcaox = 0
                     variaveis.direcaoy = -1
-            if event.key == K_s:
+            if event.key == K_s or event.key == K_DOWN:
                 if variaveis.direcaoy == -1:
                     pass
                 else:
                     variaveis.direcaox = 0
                     variaveis.direcaoy = 1
-            if event.key == K_a:
+            if event.key == K_a or event.key == K_LEFT:
                 if variaveis.direcaox == 1:
                     pass
                 else:
                     variaveis.direcaox = -1
                     variaveis.direcaoy = 0
-            if event.key == K_d:
+            if event.key == K_d or event.key == K_RIGHT:
                 if variaveis.direcaox == -1:
                     pass
                 else:
@@ -78,7 +78,6 @@ def resetar():
     variaveis.cobrax = 640 // 2
     variaveis.cobray = 480 // 2
     variaveis.tamanho = 5
-
 
 
 def morte():
