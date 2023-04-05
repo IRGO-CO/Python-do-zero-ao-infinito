@@ -78,6 +78,7 @@ def resetar():
     variaveis.cobrax = 640 // 2
     variaveis.cobray = 480 // 2
     variaveis.tamanho = 5
+    variaveis.pontos = 0
 
 
 def morte():
