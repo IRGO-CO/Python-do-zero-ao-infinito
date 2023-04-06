@@ -4,7 +4,7 @@ from . import *
 
 
 def veriFase(cobra):
-    if variaveis.fase == 1:
+    if variaveis.fase >= 0:
         fase1()
     elif variaveis.fase == 2:
         fase2(cobra)
@@ -17,7 +17,7 @@ def fase1():
     pygame.draw.line(variaveis.tela, (0, 200, 0), (10, 450), (630, 450))
     pygame.draw.line(variaveis.tela, (0, 200, 0), (10, 30), (10, 450))
     pygame.draw.line(variaveis.tela, (0, 200, 0), (630, 30), (630, 450))
-    if variaveis.cobrax < 16:
+    if variaveis.cobrax < 17:
         variaveis.cobrax = 626
     if variaveis.cobrax > 626:
         variaveis.cobrax = 16

@@ -82,5 +82,5 @@ def resetar():
 
 
 def morte():
+    menu_morte()
     resetar()
-    menu_pause()

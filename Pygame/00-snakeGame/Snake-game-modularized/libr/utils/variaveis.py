@@ -15,8 +15,8 @@ listaCorpo = list()
 cabeça = list()
 tamanho = 5
 
-pontos = 200
-fase = 1
+pontos = 0
+fase = 0
 pygame.init()
 
 largura = 640
